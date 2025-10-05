@@ -14,20 +14,30 @@ Learn how to create animated GIFs in Python using just a few lines of code! This
 
 Install `imageio`:
 
-```bash
 pip3 install imageio
 
-Code
+---
+
+## Code
+```
 import imageio.v3 as iio
 
-filenames = ['pic1.png', 'pic2.png']
-images = [iio.imread(f) for f in filenames]
-iio.imwrite('pic.gif', images, duration=500, loop=0)
+filenames = ['pic1.jpeg', 'pic2.jpeg']
+images = [ ]
+
+for filename in filenames:
+  images.append(iio.imread(filename))
+
+iio.imwrite('pic.gif', images, duration = 500, loop = 0)
+```
+---
 
 How it works:
 filenames: list of images
 images: stores image data
 iio.imwrite: creates GIF (duration in ms, loop=0 = infinite)
+
+---
 
 Run
 python3 create_gif.py
@@ -40,4 +50,4 @@ Try 3+ images
 Ensure images have the same dimensions
 
 🎉 Congrats! You now have a GIF made entirely in Python.
-```
+
