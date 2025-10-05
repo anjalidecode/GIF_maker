@@ -13,19 +13,19 @@ pip3 install imageio
 
 import imageio.v3 as iio
 
-# List your image filenames here
+### List your image filenames here
 
 filenames = ['pic1.jpeg', 'pic2.jpeg']
 
-# Load images into a list
+### Load images into a list
 
 images = []
 for filename in filenames:
 images.append(iio.imread(filename))
 
-# Create and save GIF
+### Create and save GIF
 
-# duration=500ms per frame, loop=0 means infinite loop
+### duration=500ms per frame, loop=0 means infinite loop
 
 iio.imwrite('pic.gif', images, duration=500, loop=0)
 
